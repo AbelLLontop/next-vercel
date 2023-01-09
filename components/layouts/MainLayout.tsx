@@ -3,7 +3,11 @@ import Head from 'next/head'
 import styles from './MainLayout.module.css';
 import Navbar from '../Navbar';
 
-export const MainLayout:FC = ({children}) => {
+interface Props {
+  children:JSX.Element[]|JSX.Element
+}
+
+export const MainLayout:FC<Props> = ({children}) => {
     return (
         <>
           <Head>
